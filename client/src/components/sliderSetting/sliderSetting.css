@@ -1,0 +1,38 @@
+/* Slider controls buttons */
+.slider-controls {
+  display: flex;
+  align-items: center;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: #4066ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #3452d1;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Add margin between buttons */
+.prev-btn {
+  margin-right: 10px;
+}

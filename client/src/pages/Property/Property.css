@@ -1,0 +1,152 @@
+.property-container{
+    gap: 2rem;
+    position: relative;
+}
+
+.property-container .like{
+    position: absolute;
+    top: 3rem;right: 3rem;
+    cursor: pointer;
+}
+
+
+.property-container>img{
+    align-self: center;
+    max-height: 35rem;
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.property-details{
+    width: 100%;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.property-details>div{
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.property-details .left .head{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.facilities{
+    gap: 1rem;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.facility{
+    gap: 0.5rem;
+}
+
+.property-details .button{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.property-details .button:hover{
+    transform: scale(1.05);
+}
+
+
+.property-slider .prev,
+.property-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.property-slider .prev {
+  left: 10px;
+}
+
+.property-slider .next {
+  right: 10px;
+}
+
+
+.property-slider {
+    position: relative;
+    /* max-width: 768px; */
+    height: 420px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .property-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+  }
+
+  .property-slider .prev:hover,
+  .property-slider .next:hover {
+    opacity: 1;
+  }
+  
+  .property-slider .prev {
+    left: 10px;
+  }
+  
+  .property-slider .next {
+    right: 10px;
+  }
+  
+  .property-slider .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+  }
+  
+  
+  /* Hide prev button when on first image */
+  .property-slider:first-child .prev {
+    display: none;
+  }
+  
+  /* Hide next button when on last image */
+  .property-slider:last-child .next {
+    display: none;
+  }
+
+
+@media (max-width: 700px) {
+  .property-container>div{
+      flex-direction: column;
+  }
+  .head{
+      flex-direction: column;
+  }
+  .facilities{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .property-details>div{
+      width: 100%;
+  }
+}
+
+
+  

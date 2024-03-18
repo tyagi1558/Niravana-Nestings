@@ -1,0 +1,106 @@
+/* contact.css */
+
+/* Container */
+.wrapper1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Decrease min-height for the container */
+  background-image: url('./ContactBackGroundPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.9s ease; /* Add transition for background color */
+}
+
+.contact-container {
+  width: 90%; /* Decrease width of the contact container */
+  max-width: 600px; /* Set maximum width */
+  margin: auto;
+  padding: 1.5rem; /* Decrease padding */
+  background-color: rgba(255, 255, 255, 0.95); /* Lighten the background color */
+  border-radius: 0.75rem; /* Decrease border radius */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Decrease box shadow */
+  transition: box-shadow 0.3s ease; /* Add transition for box shadow */
+}
+
+.contact-heading {
+  font-size: 2rem; /* Decrease font size */
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif; /* Use a custom font */
+  transition: color 0.3s ease; /* Add transition for text color */
+}
+
+.contact-subheading {
+  font-size: 1.5rem; /* Decrease font size */
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif; /* Use a custom font */
+  transition: color 0.3s ease; /* Add transition for text color */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Increase gap between form elements */
+}
+
+.input-field {
+  background-color: #f7f7f7; /* Light gray background */
+  border: 1px solid #ddd; /* Lighter border color */
+  border-radius: 0.5rem; /* Decrease border radius */
+  padding: 0.75rem; /* Decrease padding */
+  transition: border-color 0.3s ease; /* Add transition for border color */
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb); /* Gradient background */
+  color: white;
+  padding: 0.75rem; /* Decrease padding */
+  border: none;
+  border-radius: 0.5rem; /* Decrease border radius */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Add transitions for background color and transform */
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a); /* Gradient background on hover */
+  transform: translateY(-2px); /* Move button slightly up on hover */
+}
+
+.message {
+  font-size: 0.875rem; /* Decrease font size */
+  font-weight: bold;
+  color: #6b7280;
+  margin-top: 1rem; /* Add spacing above message */
+  font-family: 'Arial', sans-serif; /* Use a custom font */
+  transition: color 0.3s ease; /* Add transition for text color */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1640px) {
+  .contact-heading {
+    font-size: 1.75rem; /* Decrease font size for smaller screens */
+  }
+  
+  .contact-subheading {
+    font-size: 1.25rem; /* Decrease font size for smaller screens */
+  }
+  
+  .contact-form {
+    gap: 1rem; /* Decrease gap between form elements for smaller screens */
+  }
+  
+  .input-field,
+  .submit-button {
+    padding: 0.5rem; /* Decrease padding for smaller screens */
+  }
+  
+  .message {
+    font-size: 0.75rem; /* Decrease font size for smaller screens */
+  }
+}
+
+
