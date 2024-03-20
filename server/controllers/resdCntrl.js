@@ -50,13 +50,18 @@ export const createResidency = asyncHandler(async (req, res) => {
 
 // function to get all the documents/residencies
 export const getAllResidencies = asyncHandler(async (req, res) => {
-  const residencies = await prisma.residency.findMany({
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-  res.send(residencies);
+  const [residencies, count] = await Promise.all([
+    prisma.residency.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    }),
+    prisma.residency.count(),
+  ]);
+  
+  res.json({ count,residencies });
 });
+
 
 // function to get a specific document/residency
 export const getResidency = asyncHandler(async (req, res) => {

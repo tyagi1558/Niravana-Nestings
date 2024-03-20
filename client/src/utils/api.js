@@ -13,9 +13,9 @@ export const getAllProperties = async () => {
     });
 
     if (response.status === 400 || response.status === 500) {
-      throw response.data;
+      throw response.data.residencies;
     }
-    return response.data;
+    return response.data.residencies;
   } catch (error) {
     toast.error("Something went wrong");
     throw error;
