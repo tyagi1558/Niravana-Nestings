@@ -12,7 +12,9 @@ export const createResidency = asyncHandler(async (req, res) => {
     country,
     city,
     type,
+    propertySubtype,
     facilities,
+    amenities,
     images,
   } = req.body.data;
 
@@ -28,8 +30,10 @@ export const createResidency = asyncHandler(async (req, res) => {
         country,
         city,
         type,
+        propertySubtype,
         // Check if facilities is null, if not include it, otherwise exclude it
         ...(facilities !== null && { facilities }),
+        amenities,
         images,
       },
     });

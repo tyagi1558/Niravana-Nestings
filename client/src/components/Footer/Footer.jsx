@@ -23,13 +23,16 @@ the best place to live for them..</p>
             </ul>
           </div>
           <div class="footer-section">
-            <h5>Contact Us</h5>
-            <address>
-              Sector 39<br />
-              Jharsa, Gurgaon, Haryana<br />
-               
-            </address>
-          </div>
+  <h5>Contact Us</h5>
+  
+  <address>
+    Sector 39<br />
+    Jharsa, Gurgaon, Haryana<br />
+    Phone Number: +91 XXXXXXXXXX<br />
+    Email: example@example.com
+  </address>
+</div>
+
         </div>
         <hr />
     

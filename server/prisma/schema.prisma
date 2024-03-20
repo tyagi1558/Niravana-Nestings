@@ -41,6 +41,8 @@ model Residency {
     city        String
     type        String
     country     String
+    amenities   String[]  
+    propertySubtype String?
     images      Json
     facilities  Json
     createdAt   DateTime @default(now())

@@ -58,6 +58,9 @@ const Companies = () => {
   return (
     <section className="c-wrapper">
       <div className="paddings innerWidth">
+      <div className="flexColStart r-head">
+          <span className="orangeText">Top Developers</span>
+        </div>
         <Slider {...settings} beforeChange={handleImageLoad}>
           <div className="c-slide">
             <img src="./godrej1.png" alt="" />

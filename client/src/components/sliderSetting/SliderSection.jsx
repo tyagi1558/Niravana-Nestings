@@ -1,5 +1,7 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const SliderSection = ({ title, properties }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,20 +23,19 @@ const SliderSection = ({ title, properties }) => {
   }, [currentIndex, properties]);
 
   return (
-    <div className="slider">
+    <div className="slider-frame">
       <div className="slider-header">
         <span className="primaryText">{title}</span>
-        <div className="slider-controls">
-          <button className="prev-btn" onClick={prevSlide} disabled={!showPrev}>&#10094;</button>
-          <button className="next-btn" onClick={nextSlide} disabled={!showNext}>&#10095;</button>
-        </div>
+       
       </div>
-      <div className="properties-container">
-        {properties.slice(currentIndex, currentIndex + Math.min(3, properties.length)).map((card, i) => (
-          <div className="property-card" key={i}>
-            <PropertyCard card={card} />
-          </div>
-        ))}
+      <div className="slider-content">
+        <div className="properties-container">
+          {properties.slice(currentIndex, currentIndex + 3).map((card, i) => ( // Display 4 cards
+            <div className="property-card" key={i}>
+              <PropertyCard card={card} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

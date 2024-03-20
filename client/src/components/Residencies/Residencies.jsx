@@ -2,6 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Slider from "react-slick";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import "./Residencies.css";
 import { sliderSettings } from "../../utils/common";
@@ -10,14 +12,14 @@ import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from 'react-spinners'
 
 const Residencies = () => {
-  const { data, isError, isLoading } = useProperties()
+  const { data, isError, isLoading } = useProperties();
 
   if (isError) {
     return (
       <div className='wrapper'>
         <span>Error while fetching data</span>
       </div>
-    )
+    );
   }
 
   if (isLoading) {
@@ -31,7 +33,7 @@ const Residencies = () => {
           aria-label="puff-loading"
         />
       </div>
-    )
+    );
   }
 
   const settings = {
@@ -83,14 +85,28 @@ const Residencies = () => {
     }
   };
 
+  const PrevArrow = ({ onClick }) => (
+    <button className="slider-button prev-btn" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+    </button>
+  );
+  
+  const NextArrow = ({ onClick }) => (
+    <button className="slider-button next-btn" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronRight} />
+    </button>
+  );
+  
+  
+
   return (
     <div id="residencies" className="r-wrapper">
       <div className="paddings innerWidth r-container">
         <div className="flexColStart r-head">
           <span className="orangeText">Best Choices</span>
-          <span className="primaryText">Popular Residencies</span>
+          <span className="primaryText">Featured Residencies</span>
         </div>
-        <Slider {...settings} beforeChange={handleImageLoad}>
+        <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />} beforeChange={handleImageLoad}>
           {/* slider */}
           {data.slice(0, 8).map((card, i) => (
             <SwiperSlide key={i}>

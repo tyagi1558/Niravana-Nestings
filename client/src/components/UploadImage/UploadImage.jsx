@@ -28,7 +28,7 @@ const UploadImage = ({
       {
         cloudName: "dcdhklrjc",
         uploadPreset: "vx0dyjgc",
-        maxFiles: 10, // Allow up to 6 files to be uploaded
+        maxFiles: 15, // Allow up to 6 files to be uploaded
         multiple: true, // Enable multiple file upload
       },
       (err, result) => {
@@ -60,7 +60,7 @@ const UploadImage = ({
         <Button variant="default" onClick={prevStep}>
           Back
         </Button>
-        <Button onClick={handleNext} disabled={imageURLs.length < 5}>
+        <Button onClick={handleNext} disabled={imageURLs.length < 1}>
           Next
         </Button>
       </Group>

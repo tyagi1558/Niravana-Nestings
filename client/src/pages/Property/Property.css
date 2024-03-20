@@ -147,6 +147,51 @@
       width: 100%;
   }
 }
+.map-container {
+  position: relative;
+}
 
 
-  
+
+.amenities-container {
+   /* Center horizontally */
+   position: relative;
+
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.amenities-container h2 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.amenity-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.amenity-card img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}

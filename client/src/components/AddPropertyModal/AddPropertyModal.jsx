@@ -15,6 +15,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
     description: "",
     price: 0,
     type:"",
+    propertySubtype:"",
     country: "",
     city: "",
     address: "",
@@ -24,6 +25,8 @@ const AddPropertyModal = ({ opened, setOpened }) => {
       parkings: 0,
       bathrooms: 0,
     },
+    amenities: [],
+
   });
 
   const nextStep = () => {

@@ -12,3 +12,15 @@
     object-fit: contain;
   }
   
+  /* CSS */
+.r-head {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 20px; /* Add margin if needed */
+}
+
+.orangeText {
+  color: black; /* Adjust color as needed */
+  font-size: 24px; /* Adjust font size as needed */
+}

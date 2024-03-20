@@ -1,3 +1,5 @@
+// Property.js
+
 import React, { useContext, useState } from "react";
 import { useMutation, useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
@@ -7,7 +9,7 @@ import { AiFillHeart } from "react-icons/ai";
 import "./Property.css";
 
 import { FaShower } from "react-icons/fa";
-import { AiTwotoneCar,AiFillBoxPlot } from "react-icons/ai";
+import { AiTwotoneCar, AiFillBoxPlot } from "react-icons/ai";
 import { MdLocationPin, MdMeetingRoom } from "react-icons/md";
 import Map from "../../components/Map/Map";
 import useAuthCheck from "../../hooks/useAuthCheck";
@@ -17,7 +19,6 @@ import UserDetailContext from "../../context/UserDetailContext.js";
 import { Button } from "@mantine/core";
 import { toast } from "react-toastify";
 import Heart from "../../components/Heart/Heart";
-// import BookingFormModal from "../../components/BookingFormModal/BookingFormModal"; // Import the modal component
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -94,7 +95,6 @@ const Property = () => {
 
   return (
     <div className="wrapper">
-      
       <div className="flexColStart paddings innerWidth property-container">
         {/* like button */}
         <div className="like">
@@ -102,23 +102,23 @@ const Property = () => {
         </div>
 
         {/* image */}
-        
- <div className="property-slider">
-  <img  src={data?.images[currentIndex]} alt="property image" />
-  <button className="prev" onClick={prevSlide}>&#10094;</button>
-  <button className="next" onClick={nextSlide}>&#10095;</button>
-  <div className="overlay"></div>
-</div>
-
+        <div className="property-slider">
+          <img src={data?.images[currentIndex]} alt="property image" />
+          <button className="prev" onClick={prevSlide}>&#10094;</button>
+          <button className="next" onClick={nextSlide}>&#10095;</button>
+          <div className="overlay"></div>
+        </div>
 
         <div className="flexCenter property-details">
           {/* left */}
           <div className="flexColStart left">
             {/* head */}
             <div className="flexStart head">
-              <span className="primaryText">{data?.title} for {data?.type}</span>
+              <span className="primaryText">
+                {data?.title} for {data?.type}
+              </span>
               <span className="orangeText" style={{ fontSize: "1.5rem" }}>
-              ₹ {data?.price}
+                ₹ {data?.price}
               </span>
             </div>
 
@@ -132,10 +132,8 @@ const Property = () => {
 
               <div className="flexStart facility">
                 <AiFillBoxPlot size={20} color="#1F3E72" />
-
-  <span>Area: {data?.area} </span>
-</div>
-
+                <span>Area: {data?.area} </span>
+              </div>
 
               {/* parkings */}
               <div className="flexStart facility">
@@ -151,16 +149,11 @@ const Property = () => {
             </div>
 
             {/* description */}
-
-            <span
-              className="secondaryText"
-              style={{ textAlign: "justify" }}
-            >
+            <span className="secondaryText" style={{ textAlign: "justify" }}>
               {data?.description}
             </span>
 
             {/* address */}
-
             <div className="flexStart" style={{ gap: "1rem" }}>
               <MdLocationPin size={25} />
               <span className="secondaryText">
@@ -193,8 +186,6 @@ const Property = () => {
                 <button className="button" onClick={handleBookVisit}>
                   Book your visit
                 </button>
-                {/* Render the BookingFormModal */}
-               
               </>
             )}
 
@@ -206,16 +197,65 @@ const Property = () => {
             />
           </div>
 
-          {/* right side */}
-          <div className="map">
-            <Map
-              address={data?.address}
-              city={data?.city}
-              country={data?.country}
-            />
-          </div>
+        {/* right side */}
+<div className="map-container">
+  <div className="map">
+    <Map
+      address={data?.address}
+      city={data?.city}
+      country={data?.country}
+    />
+  </div>
+  
+
+</div>
+  {/* Ameities container */}
+{/* <div className="amenities-container">
+    <h2 style={{ marginBottom: "20px" }}>Amenities</h2>
+    <div className="amenities-grid">
+      {data?.amenities.map((amenity, index) => (
+        <div
+          key={index}
+          className="amenity-card"
+          style={{
+            marginBottom: "10px",
+            padding: "10px",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+          }}
+        >
+          {amenity}
         </div>
+      ))}
+    </div>
+  </div> */}
+
+        </div>
+        {data?.amenities && data.amenities.length > 0 && (
+  <div className="amenities-container">
+    <h2 style={{ marginBottom: "20px" }}>Amenities</h2>
+    <div className="amenities-grid">
+      {data.amenities.map((amenity, index) => (
+        <div
+          key={index}
+          className="amenity-card"
+          style={{
+            marginBottom: "10px",
+            padding: "10px",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+          }}
+        >
+          {amenity}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
       </div>
+
+    
     </div>
   );
 };

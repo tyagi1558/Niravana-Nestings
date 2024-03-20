@@ -1,82 +1,72 @@
 /* Footer Styles */
 .footer {
-    background-color: #343a40;
-  }
-  
-  .footer h5 {
-    color: #fff;
-  }
-  
-  .footer p {
-    color: #ccc;
-  }
-  
-  .footer a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    color: #fff;
-  }
-  
-  .footer address {
-    color: #ccc;
-  }
-  
-  .footer hr {
-    border-color: #666;
-  }
-  
-  .footer ul {
-    padding-left: 0;
-  }
-  
-  .footer ul li {
-    list-style: none;
-    margin-bottom: 10px;
-  }
-  
-  .footer ul li a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  
-  .footer ul li a:hover {
-    color: #fff;
-  }
-  
-  .footer .bi {
-    font-size: 1.5rem;
-    color: #ccc;
-  }
-  
-  .footer .bi:hover {
-    color: #fff;
-  }
+  background-color: #343a40;
+  padding: 30px 20px;
+}
 
-  /* Footer Styles */
-.footer {
-    background-color: #343a40;
-    padding: 30px 20px;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer-section {
-    flex: 1;
-  }
-  
-  .footer-section h5 {
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .footer-section p {
-    color: #ccc;
-    margin-bottom: 10px;
-  }
-  
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.footer-section {
+  flex: 1;
+  margin-bottom: 20px; /* Add some bottom margin between sections */
+}
+
+.footer-section h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer hr {
+  border-color: #666;
+  margin: 20px 0; /* Add some margin above and below the horizontal rule */
+}
+
+.footer ul {
+  padding-left: 0;
+  margin: 0; /* Remove default margin from the unordered list */
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.footer .bi {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-right: 5px; /* Add some right margin to the icons for spacing */
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.footer .bi:hover {
+  color: #fff;
+}

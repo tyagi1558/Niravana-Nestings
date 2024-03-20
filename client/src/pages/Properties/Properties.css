@@ -1,41 +1,4 @@
-/* Search bar styles */
-.search-bar {
-  width: 100%;
-  max-width: 28rem;
-  margin-bottom: 20px; /* Add margin to separate from slider */
-  border-radius: 30px;
-  border: 2px solid #ddd; /* Updated border */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px; /* Adjust padding for better appearance */
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Updated box shadow */
-}
 
-.search-bar input {
-  flex-grow: 1; /* Allow input to grow to fill available space */
-  border: none;
-  outline: none;
-  padding: 10px 15px; /* Increased padding */
-  font-size: 16px; /* Increased font size */
-  color: #333; /* Changed text color */
-}
-
-.search-bar .button {
-  border-radius: 30px;
-  font-size: 16px; /* Increased font size */
-  padding: 10px 20px; /* Increased padding */
-  background-color: #4066ff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-bar .button:hover {
-  background-color: #3452d1;
-}
 
 /* Slider and Property Card styles */
 .slider-container {
@@ -57,20 +20,7 @@
   color: #333;
 }
 
-.slider-controls button {
-  background-color: transparent;
-  border: none;
-  font-size: 28px; /* Increased font size */
-  cursor: pointer;
-  outline: none;
-  margin: 0 10px; /* Increased margin */
-  color: #4066ff;
-  transition: color 0.3s ease;
-}
 
-.slider-controls button:hover {
-  color: #3452d1;
-}
 
 .properties-container {
   display: flex;
@@ -123,6 +73,21 @@
   margin-top: 10px;
 }
 
+h2 {
+  font-size: 44px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+/* Type title styles */
+.subgrid-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2b2c2e;
+  margin-bottom: 10px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .property-card {
@@ -140,4 +105,55 @@
   .property-card {
     flex-basis: calc(100% - 20px); /* Set card width to 100% minus margins */
   }
+}
+
+.container-padding {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.inner-width {
+  max-width: 1200px; /* Adjust maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.container-container {
+  margin-top: 20px; /* Add margin between sections */
+}
+
+.container-header {
+  margin-bottom: 10px; /* Add margin below the heading */
+}
+
+.header-text {
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width and responsiveness */
+  grid-gap: 20px; /* Add gap between grid items */
+}
+
+.property-item {
+  background-color: #f8f8f8; /* Background color of property items */
+  padding: 10px; /* Add padding inside property items */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Additional styles for PropertyCard component (adjust as needed) */
+.property-item img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  border-radius: 5px; /* Add border radius for rounded image corners */
+}
+
+.property-item h3 {
+  margin-top: 10px; /* Add margin above property titles */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the titles bold */
+}
+
+.property-item p {
+  margin-top: 5px; /* Add margin above property descriptions */
+  font-size: 14px; /* Adjust font size as needed */
 }
