@@ -108,8 +108,7 @@ const Residencies = () => {
         </div>
         <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />} beforeChange={handleImageLoad}>
           {/* slider */}
-          {data.slice(0, 8).map((card, i) => (
-            <SwiperSlide key={i}>
+          {data.map((card, i) => (            <SwiperSlide key={i}>
               <PropertyCard card={card} />
             </SwiperSlide>
           ))}

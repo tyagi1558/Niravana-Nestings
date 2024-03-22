@@ -26,22 +26,6 @@ const SliderSection = ({ title, properties }) => {
     };
   }, []);
 
-  const startAutoSlide = () => {
-    const interval = setInterval(() => {
-      if (currentIndex > properties.length - 3) {
-        nextSlide();
-      } else {
-        setCurrentIndex(0); // Reset index to start if at the end
-      }
-    }, 1500); // Adjust the interval as needed (e.g., every 1.5 seconds)
-    setAutoSlideInterval(interval);
-  };
-  
-  const stopAutoSlide = () => {
-    clearInterval(autoSlideInterval);
-    setAutoSlideInterval(null);
-  };
-
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? properties.length - 1 : prevIndex - 1));
   };
@@ -52,14 +36,6 @@ const SliderSection = ({ title, properties }) => {
     }
   };
 
-  useEffect(() => {
-    startAutoSlide();
-
-    // Clean up interval when component unmounts
-    return () => {
-      stopAutoSlide();
-    };
-  }, []);
 
   // Update prev/next button visibility based on currentIndex and properties length
   useEffect(() => {
@@ -69,7 +45,7 @@ const SliderSection = ({ title, properties }) => {
 
   return (
     <div className="slider-frame" style={{ position: 'relative' }}>
-      <button className="custom-prev-btn" onClick={prevSlide} onMouseEnter={stopAutoSlide} onMouseLeave={startAutoSlide} disabled={!showPrev}>&#10094;</button>
+      <button className="custom-prev-btn" onClick={prevSlide} disabled={!showPrev}>&#10094;</button>
       <div className="slider">
         <div className="slider-header">
           <span className="primaryText">{title}</span>
@@ -84,7 +60,7 @@ const SliderSection = ({ title, properties }) => {
           </div>
         </div>
       </div>
-      <button className="custom-next-btn" onClick={nextSlide} onMouseEnter={stopAutoSlide} onMouseLeave={startAutoSlide} disabled={!showNext}>&#10095;</button>
+      <button className="custom-next-btn" onClick={nextSlide} disabled={!showNext}>&#10095;</button>
     </div>
   );
 };

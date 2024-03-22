@@ -14,7 +14,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
 
   const form = useForm({
     initialValues: {
-      country: propertyDetails?.country,
+      country: "India",
       city: propertyDetails?.city,
       address: propertyDetails?.address,
       type: propertyDetails?.type,
@@ -111,15 +111,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
             />
           )}
 
-          <Select
-            style={{ width: "100%", marginBottom: "1rem" }}
-            withAsterisk
-            label="Country"
-            clearable
-            searchable
-            data={getAll()}
-            {...form.getInputProps("country", { type: "input" })}
-          />
+          
           <TextInput style={{ width: "100%", marginBottom: "1rem" }} withAsterisk label="City" {...form.getInputProps("city", { type: "input" })} />
           <TextInput style={{ width: "100%", marginBottom: "1rem" }} withAsterisk label="Address" {...form.getInputProps("address", { type: "input" })} />
         </div>
