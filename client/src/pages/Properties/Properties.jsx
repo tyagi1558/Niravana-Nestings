@@ -33,6 +33,9 @@ const Properties = () => {
     );
   }
 
+
+ 
+
   // Function to convert property price to a consistent format for comparison
   const getPropertyPrice = (price) => {
     const lowercasePrice = price.toLowerCase();

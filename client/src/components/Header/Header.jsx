@@ -42,6 +42,8 @@ const Header = () => {
             className="flexCenter h-menu"
             style={getMenuStyles(menuOpened)}
           >
+            <NavLink to="/">Home</NavLink>
+
             <NavLink to="/properties">Properties</NavLink>
             <NavLink to="/contact">Contact</NavLink>
 

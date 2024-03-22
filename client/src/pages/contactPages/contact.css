@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   min-height: 80vh; /* Decrease min-height for the container */
-  background-image: url('https://i.ibb.co/gjSyKfD/IMG-20240320-WA0011.jpg');
+  background-image: url('./ContactBackGroundPhoto.jpg'); /* Use the relative path to the image */
   background-size: cover;
   background-position: center;
   transition: background-color 0.9s ease; /* Add transition for background color */

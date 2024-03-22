@@ -9,7 +9,7 @@
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  height: 20rem; /* Fixed height for all cards */
+  height: 21rem; /* Fixed height for all cards */
 }
 
 .r-card > svg {

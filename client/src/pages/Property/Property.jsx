@@ -234,7 +234,7 @@ const Property = () => {
         {data?.amenities && data.amenities.length > 0 && (
   <div className="amenities-container">
     <h2 style={{ marginBottom: "20px" }}>Amenities</h2>
-    <div className="amenities-grid">
+    <div className="amenities-grid" style={{display:"flex",flexWrap:"wrap"}}>
       {data.amenities.map((amenity, index) => (
         <div
           key={index}

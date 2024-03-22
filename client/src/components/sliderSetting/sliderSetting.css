@@ -1,74 +1,33 @@
-.r-container {
-  gap: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.r-head{
-  margin-bottom: 2rem;
-}
-
-.swiper-horizontal{
-  overflow: visible;
-}
-.r-buttons{
-  position: absolute;
-  gap: 1rem;
-  top: -4rem;
-  right: 0;
-}
-.r-buttons button{
-  font-size: 1.2rem;
-  padding: .2rem .8rem;
-  color: blue;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-.r-buttons>:nth-child(1)
-{
-  background-color: #EEEEFF;
-}
-.r-buttons>:nth-child(2)
-{
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
-}
-
-
-@media (max-width: 640px) {
-  .r-head{
-  align-items: center;
-  }
-  .r-buttons{
-    position: initial;
-  }
-}
-/* CSS */
-.prev-btn,
-.next-btn {
+.custom-prev-btn,
+.custom-next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 20px;
   z-index: 1;
+  border: none;
+  background-color: #1b241896;
+  color: rgb(149, 159, 172);
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.prev-btn {
+.custom-prev-btn {
   left: 10px;
 }
 
-.next-btn {
+.custom-next-btn {
   right: 10px;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
-  opacity: 1;
+@media (max-width: 768px) {
+  .custom-prev-btn,
+  .custom-next-btn {
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+  }
 }
