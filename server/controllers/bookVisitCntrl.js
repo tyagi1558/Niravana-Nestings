@@ -61,7 +61,7 @@ console.log("id: ", req.body, "new Data :", newData);
       data: newData, 
     });
 
-    res.send({ message: "booking visit updated successfully", updatedBookingVisit });
+    res.send({ message: "Booking visit updated successfully", updatedBookingVisit });
   } catch (err) {
     throw new Error(err.message);
     console.log(err.stack)
