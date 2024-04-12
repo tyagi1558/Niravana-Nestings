@@ -78,37 +78,37 @@ if (filter.budget) {
         return false;
       }
       break;
-    case '8cr-7cr':
+    case '7cr-8cr':
       if (!(propertyPrice >= 70000000 && propertyPrice < 80000000)) {
         return false;
       }
       break;
-    case '7cr-6cr':
+    case '6cr-7cr':
       if (!(propertyPrice >= 60000000 && propertyPrice < 70000000)) {
         return false;
       }
       break;
-    case '6cr-5cr':
+    case '5cr-6cr':
       if (!(propertyPrice >= 50000000 && propertyPrice < 60000000)) {
         return false;
       }
       break;
-    case '5cr-4cr':
+    case '4cr-5cr':
       if (!(propertyPrice >= 40000000 && propertyPrice < 50000000)) {
         return false;
       }
       break;
-    case '4cr-3cr':
+    case '3cr-4cr':
       if (!(propertyPrice >= 30000000 && propertyPrice < 40000000)) {
         return false;
       }
       break;
-    case '3cr-2cr':
+    case '2cr-3cr':
       if (!(propertyPrice >= 20000000 && propertyPrice < 30000000)) {
         return false;
       }
       break;
-    case '2cr-1cr':
+    case '1cr-2cr':
       if (!(propertyPrice >= 10000000 && propertyPrice < 20000000)) {
         return false;
       }
@@ -128,8 +128,8 @@ if (filter.budget) {
       if (filter.query) {
         const query = filter.query.toLowerCase();
         if (
-          !property?.title?.toLowerCase().includes(query) &&
-          !property?.type?.toLowerCase().includes(query) &&
+          !property?.propertySubtype?.toLowerCase().includes(query) &&
+          !property?.propertySubtype?.toLowerCase().includes(query) &&
           !property?.propertySubtype?.toLowerCase().includes(query)
         ) {
           return false;
@@ -167,13 +167,13 @@ if (filter.budget) {
           <div className="grid-container">
             {/* Residential Section */}
             <div className="grid-item">
-              <h2>Residential</h2>
+              <h2 >Residential</h2>
               <div className="subgrid-container">
                 {/* Upcoming Projects */}
                 <div className="subgrid-item">
                   <SliderSection
                     title="Upcoming Projects"
-                    properties={data.filter(property => property?.type?.toLowerCase() === 'residential')}
+                    properties={data.filter(property => property?.propertySubtype?.toLowerCase() == 'upcoming projects')}
                   />
                 </div>
 
@@ -181,7 +181,7 @@ if (filter.budget) {
                 <div className="subgrid-item">
                   <SliderSection
                     title="Ready to Move"
-                    properties={data.filter(property => property?.type?.toLowerCase() === 'rent')}
+                    properties={data.filter(property => property?.propertySubtype?.toLowerCase() === 'ready to move')}
                   />
                 </div>
 

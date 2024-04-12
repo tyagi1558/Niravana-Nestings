@@ -10,6 +10,13 @@
   justify-content: space-between;
 }
 
+#logo {
+  border-radius: 50%; /* Makes the image circular */
+  width: 80px; /* Set the width of the image */
+  height: 80px; /* Set the height of the image */
+}
+
+
 .h-menu {
   gap: 2rem;
 }

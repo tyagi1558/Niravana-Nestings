@@ -97,6 +97,7 @@ const Facilities = ({
     onSettled: () => {
       toast.success("Added Successfully", { position: "bottom-right" });
       setPropertyDetails({
+        mail:"",
         title: "",
         description: "",
         price: 0,
