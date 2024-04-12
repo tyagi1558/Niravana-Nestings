@@ -13,43 +13,49 @@ model User {
   phone            String      @unique
   password         String      @unique
 
-  image            String?
-  bookedVisits     Json[]
-  favResidenciesID String[]    @db.ObjectId
 }
 
 model BookVisit {
-  id       String   @id @default(auto()) @map("_id") @db.ObjectId
-  name     String
-  date     String
-  phone    String
-  city     String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  propertyId String
+  id              String       @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  date            String
+  phone           String
+  city            String
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  followUp        String?
+  reason          String?
+  response        String?
+  nextFollowUp    String?
+  calendarCondition String?
+  propertyId      String       // Add propertyId field
+  
+  // Add a relation to Residency model using propertyId
+  Residency       Residency?   @relation(fields: [propertyId], references: [id])
 }
-
 
 model Residency {
-    id          String   @id @default(auto()) @map("_id") @db.ObjectId
-    title       String
-    description String
-    price       String
-    area        String
-    address     String
-    city        String
-    type        String
-    country     String
-    amenities   String[]  
-    propertySubtype String?
-    images      Json
-    facilities  Json
-    createdAt   DateTime @default(now())
-    updatedAt   DateTime @updatedAt
+  id              String       @id @default(auto()) @map("_id") @db.ObjectId
+  mail            String
+  title           String
+  description     String
+  price           String
+  area            String
+  address         String
+  city            String
+  type            String
+  country         String
+  amenities       String[]
+  propertySubtype String?
+  images          Json
+  facilities      Json
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
 
-    @@unique(fields: [address])
+  // Reverse relation to BookVisit model
+  BookVisits      BookVisit[]
 }
+
 
 model ContactDetails {
   id      String   @id @default(auto()) @map("_id") @db.ObjectId

@@ -4,6 +4,7 @@ import { prisma } from "../config/prismaConfig.js";
 
 export const createResidency = asyncHandler(async (req, res) => {
   const {
+    mail,
     title,
     description,
     price,
@@ -22,6 +23,7 @@ export const createResidency = asyncHandler(async (req, res) => {
   try {
     const residency = await prisma.residency.create({
       data: {
+        mail,
         title,
         description,
         price,

@@ -34,12 +34,14 @@ const SearchBar = ({ filter, setFilter }) => {
         <select value={filter.type} onChange={handleTypeChange}>
           <option value="">Select Type</option>
           <optgroup label="Residential">
-            <option value="Residential">Residential</option>
-            <option value="Commercial">Commercial</option>
-            <option value="Plot">Plots</option>
-            <option value="Farmhouses">Farmhouses</option>
-            <option value="Builder Floors">Builder Floors</option>
+            <option value="UpcomingProjects">Upcoming projects</option>
+            <option value="ReadyToMove">Ready to move</option>
+            <option value="LuxuryLiving">Luxury Living</option>
+            <option value="BuilderFloors">Builder Floors</option>
+            <option value="AffordableLiving">Affordable Living</option>
             <option value="Villas">Villas</option>
+            <option value="Plot">Plots</option>
+
           </optgroup>
           <optgroup label="Commercial">
             <option value="Shops">Shops</option>
@@ -51,13 +53,13 @@ const SearchBar = ({ filter, setFilter }) => {
         <select value={filter.budget} onChange={handleBudgetChange}>
           <option value="">Select Budget</option>
           <option value="Above 8cr">Above 8 Cr</option>
-          <option value="8cr-7cr">8 Cr - 7 Cr</option>
-          <option value="7cr-6cr">7 Cr - 6 Cr</option>
-          <option value="6cr-5cr">6 Cr - 5 Cr</option>
-          <option value="5cr-4cr">5 Cr - 4 Cr</option>
-          <option value="4cr-3cr">4 Cr - 3 Cr</option>
-          <option value="3cr-2cr">3 Cr - 2 Cr</option>
-          <option value="2cr-1cr">2 Cr - 1 Cr</option>
+          <option value="7cr-8cr">7 Cr - 8 Cr</option>
+          <option value="6cr-7cr">6 Cr - 7 Cr</option>
+          <option value="5cr-6cr">5 Cr - 6 Cr</option>
+          <option value="4cr-5cr">4 Cr - 5 Cr</option>
+          <option value="3cr-4cr">3 Cr - 4 Cr</option>
+          <option value="2cr-3cr">2 Cr - 3 Cr</option>
+          <option value="1cr-2cr">1 Cr - 2 Cr</option>
           <option value="Below 1cr">Below 1 Cr</option>
         </select>
       </div>

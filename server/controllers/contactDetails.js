@@ -25,6 +25,7 @@ export const createContactDetail = asyncHandler(async (req, res) => {
 
 // Get all contact details
 export const getAllContactDetails = asyncHandler(async (req, res) => {
+    console.log("Anmol")
     const contactDetails = await prisma.contactDetails.findMany({
         orderBy: {
             createdAt: "desc", // Assuming there's a createdAt field to order by creation time

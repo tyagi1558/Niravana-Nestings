@@ -6,6 +6,7 @@ import { validateString } from "../../utils/common";
 const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails }) => {
   const form = useForm({
     initialValues: {
+      mail:propertyDetails.mail,
       title: propertyDetails.title,
       description: propertyDetails.description,
       price: propertyDetails.price,
@@ -13,6 +14,7 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
 
     },
     validate: {
+      mail: (value) => validateString(value),
       title: (value) => validateString(value),
       description: (value) => validateString(value),
       price: (value) =>validateString(value),
@@ -21,13 +23,13 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
     },
   });
 
-  const {title, description, price,area} = form.values
+  const {mail,title, description, price,area} = form.values
 
 
   const handleSubmit = ()=> {
     const {hasErrors} = form.validate()
     if(!hasErrors) {
-     setPropertyDetails((prev)=> ({...prev, title, description, price,area}))
+     setPropertyDetails((prev)=> ({...prev, mail,title, description, price,area}))
      nextStep()
     }
    }
@@ -37,6 +39,12 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
           e.preventDefault();
           handleSubmit();
         }}>
+        <TextInput
+          withAsterisk
+          label="mail"
+          placeholder="Enter your Mail address.."
+          {...form.getInputProps("mail")}
+        />
         <TextInput
           withAsterisk
           label="Title"
