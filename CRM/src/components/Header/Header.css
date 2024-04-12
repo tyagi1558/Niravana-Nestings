@@ -1,0 +1,42 @@
+/* Header.css */
+
+.h-wrapper {
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 10px 0; /* add padding to the top and bottom */
+}
+
+.h-container {
+  justify-content: space-between; /* evenly distribute items */
+  align-items: center; /* center items vertically */
+}
+
+.h-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.h-menu a {
+  color: #fff; /* white text for links */
+  text-decoration: none; /* remove underline */
+  margin-right: 20px; /* add margin between menu items */
+}
+
+.h-menu a:hover {
+  text-decoration: underline; /* underline on hover */
+}
+
+.menu-icon {
+  display: none; /* hide menu icon by default */
+}
+
+@media (max-width: 768px) {
+  .h-menu {
+    display: none; /* hide menu on smaller screens */
+  }
+
+  .menu-icon {
+    display: block; /* display menu icon on smaller screens */
+    cursor: pointer; /* show pointer cursor on hover */
+  }
+}

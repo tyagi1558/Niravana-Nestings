@@ -1,0 +1,102 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-bar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+    font-size: 16px;
+    color: #4a5568;
+    width: 200px;
+    max-width: 100%;
+    transition: border-color 0.3s ease;
+  }
+  
+  .select-wrapper select:hover,
+  .select-wrapper select:focus {
+    border-color: var(--blue);
+  }
+  
+  .select-wrapper:last-child {
+    flex-grow: 1;
+    margin-left: 12px;
+  }
+  
+  .select-wrapper:last-child input[type="text"] {
+    border: 1px solid #e2e8f0;
+    outline: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #4a5568;
+    width: 100%;
+    transition: border-color 0.3s ease;
+  }
+  
+  .select-wrapper:last-child input[type="text"]:hover,
+  .select-wrapper:last-child input[type="text"]:focus {
+    border-color: var(--blue);
+  }
+  
+  .select-wrapper:last-child svg {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blue);
+  }
+  
+  .select-wrapper:last-child input[type="text"]::placeholder {
+    color: #a0aec0;
+  }
+  
+  .apply-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a5568;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #2d3748;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .search-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .select-wrapper:last-child {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+  
+    .select-wrapper:last-child input[type="text"] {
+      margin-top: 12px;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+.contact-details-container {
+    padding: 20px;
+  }
+  
+  .search-input {
+    margin-bottom: 16px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .table {
+    min-width: 750px;
+  }
+  
+  .table-cell {
+    padding: 12px;
+  }
+  
+  .table-head-cell {
+    font-weight: bold;
+  }
+  
+  .actions-cell {
+    width: 120px;
+  }
+  
+  .actions-cell button {
+    margin-right: 8px;
+  }
+  
+  .loading-row {
+    font-style: italic;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .table {
+      min-width: auto;
+    }
+  
+    .actions-cell {
+      width: auto;
+    }
+  }
+
+  
+  
